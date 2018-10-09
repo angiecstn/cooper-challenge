@@ -3,6 +3,8 @@ require 'rails_helper'
 RSpec.describe User, type: :model do
   it 'should have valid Factory' do
     expect(create(:user)).to be_valid
+  end
+    
     describe 'Database table' do
         it { is_expected.to have_db_column :id }
         it { is_expected.to have_db_column :provider }
@@ -26,7 +28,7 @@ RSpec.describe User, type: :model do
         it { is_expected.to have_db_column :tokens }
         it { is_expected.to have_db_column :created_at }
         it { is_expected.to have_db_column :updated_at }
-    end
+    end 
 
     describe 'Validations' do
         it { is_expected.to validate_presence_of(:email) }
@@ -49,5 +51,9 @@ RSpec.describe User, type: :model do
             it { is_expected.to allow_value(email).for(:email) }
           end
         end
+
+        describe 'Relations' do
+                it { is_expected.to have_many :performance_data }
+        end
   end
-end
+end 
