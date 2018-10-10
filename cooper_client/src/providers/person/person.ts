@@ -10,20 +10,11 @@ public assessmentMessage: string;
 public person: PersonProvider;
 
 
-constructor(
-  public navCtrl: NavController,
-  
-  ) {
-  this.user = { distance: 1000, age: 20, gender: 'female' };
-  }
-  
-  calculate() {
-      this.person.age = this.user.age;
-      this.person.gender = this.user.gender;
-  
-      this.person.doAssessment(this.user.distance);
-      console.log(this.person.assessmentMessage);
-  
-  }
+    constructor(private cooper: CooperProvider) {}
 
-} 
+    doAssessment(distance: number): void {
+        this.assessmentMessage = this.cooper.assess(this, distance);
+    }
+
+}
+
