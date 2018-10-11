@@ -26,7 +26,7 @@ import { Angular2TokenService } from 'angular2-token';
     HttpModule,
     RouterModule
   ],
-  bootstrap: [IonicApp],
+  bootstrap: [IonicApp], 
   entryComponents: [
     MyApp,
     HomePage
