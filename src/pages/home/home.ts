@@ -14,7 +14,8 @@ export class HomePage {
 
   constructor(
     public navCtrl: NavController,
-    public person: PersonProvider
+    public person: PersonProvider,
+    public performanceData: PerformanceDataProvider    
     ) {
     this.user = { distance: 1000, age: 20, gender: 'female' };
     }
@@ -29,5 +30,6 @@ export class HomePage {
       .subscribe(data => console.log(data));
  
   }
+}
   
 
