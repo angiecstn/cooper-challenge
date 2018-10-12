@@ -3,6 +3,7 @@ import { NavController, ModalController } from 'ionic-angular';
 import { PersonProvider } from '../../providers/person/person';
 import { PerformanceDataProvider } from '../../providers/performance-data/performance-data';
 import { ResultPage } from '../pages/result/results';
+import { ModalController } from 'ionic-angular';
 
 @Component({
   selector: 'page-home',
@@ -35,6 +36,13 @@ export class HomePage {
   showResults() {
   this.modalCtrl.create(ResultsPage).present();
 }
+
+      saveResults(user) {
+        this.performanceData
+          .saveData({ performance_data: { data: { message: this.person.assessmentMessage}}})
+          .subscribe(data => console.log(data));
+      }
+
 
 }
   

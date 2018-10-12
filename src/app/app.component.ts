@@ -4,7 +4,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { HomePage } from '../pages/home/home';
 import { Angular2TokenService } from 'angular2-token';
-import { ResultPage } from '../pages/result/results';
+import { ResultsPage } from '../pages/results/results';
 
 
 
@@ -39,8 +39,8 @@ export class MyApp {
 
   initializeApp() {
       this.platform.ready().then(() => {
-      this.statusBar.styleDefault();
-      this.splashScreen.hide();
+        this.statusBar.styleDefault();
+        this.splashScreen.hide();
     });
   }
 
