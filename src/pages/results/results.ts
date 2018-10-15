@@ -52,7 +52,7 @@ export class ResultsPage {
 
     chartHovered(event: any): void {
       console.log(event);
-    
+    }
 
     ionViewDidLoad() {
     this.performanceData
@@ -67,5 +67,5 @@ export class ResultsPage {
       });
   }
 }
-}
+
 

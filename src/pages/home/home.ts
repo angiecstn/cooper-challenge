@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-import { NavController, ModalController } from 'ionic-angular';
+import { NavController } from 'ionic-angular';
 import { PersonProvider } from '../../providers/person/person';
 import { PerformanceDataProvider } from '../../providers/performance-data/performance-data';
-import { ResultPage } from '../pages/result/results';
+import { ResultsPage } from '../results/results';
 import { ModalController } from 'ionic-angular';
 
 @Component({
